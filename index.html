@@ -28,10 +28,19 @@
       type="text"
       name="todo-item-content"
       id="todo-item-content"
-      onkeyup="event.key === 'Enter' && addNewTodoItem(event)"
+      ng-model="todo.tempItem"
+      ng-keyup="$event.key === 'Enter' && addNewTodoItem()"
       placeholder="Add TODO item"
     />
-    <ul id="todo-container" class="container"></ul>
+    <ul id="todo-container" class="container">
+      <li 
+        ng-repeat="item in todo.list track by $index"
+        class="row py-3 border-top border-bottom border-light-subtle"
+      >
+        <p class="col-11 m-0">{{item}}</p>
+        <button class="btn btn-outline-danger btn-md col-1">X</button>
+      </li>
+    </ul>
   </div>
   <script src="./index.js"></script>
 </body>
