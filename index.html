@@ -38,7 +38,12 @@
         class="row py-3 border-top border-bottom border-light-subtle"
       >
         <p class="col-11 m-0">{{item}}</p>
-        <button class="btn btn-outline-danger btn-md col-1">X</button>
+        <button 
+          ng-click="removeTodoItem($index)"
+          class="btn btn-outline-danger btn-md col-1"
+        >
+          X
+        </button>
       </li>
     </ul>
   </div>
