@@ -10,4 +10,7 @@ app.controller("todoCtrl", function($scope) {
     $scope.todo.tempItem = ''
     console.log($scope.todo.list);
   } 
+  $scope.removeTodoItem = function(index) {
+    $scope.todo.list.splice(index,1);
+  }
 });
