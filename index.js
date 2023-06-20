@@ -8,7 +8,6 @@ app.controller("todoCtrl", function($scope) {
   $scope.addNewTodoItem = function() {
     $scope.todo.list.push($scope.todo.tempItem);
     $scope.todo.tempItem = ''
-    console.log($scope.todo.list);
   } 
   $scope.removeTodoItem = function(index) {
     $scope.todo.list.splice(index,1);
